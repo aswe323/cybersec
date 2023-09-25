@@ -15,9 +15,10 @@ in
 	  ];
 	 env = {
 	  secure_pizza= "Pineapple toppings";	  
+	  GCM_CREDENTIAL_STORE="cache";
+	  GCM_CREDENTIAL_CACHE_OPTIONS="--timeout 300";
 	 };
 	 shellHook = '' 
-	   export GCM_CREDENTIAL_CACHE_OPTIONS="--timeout 300"
 	   cowsay \"Hello with $secure_pizza\"
 	  '';
 	}
