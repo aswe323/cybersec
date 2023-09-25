@@ -15,6 +15,7 @@ in
 	  pkgs.openssh
 	  pkgs.gitFull
 	  pkgs.git-credential-manager
+	  pkgs.dotnet-sdk_8
 	  ];
 	 env = {
 	  secure_pizza= "Pineapple toppings";	  
