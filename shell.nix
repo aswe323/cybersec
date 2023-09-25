@@ -15,14 +15,14 @@ in
 	  pkgs.openssh
 	  pkgs.gitFull
 	  pkgs.git-credential-manager
-	  pkgs.dotnet-sdk_8
+	  pkgs.dotnet-runtime_8
 	  ];
 	 env = {
 	  secure_pizza= "Pineapple toppings";	  
-	  GCM_CREDENTIAL_STORE="cache";
-	  GCM_CREDENTIAL_CACHE_OPTIONS="--timeout 300";
 	 };
 	 shellHook = '' 
+	   git config --global credential.credentialStore cache
+	   git config --global credential.cacheOptions "--timeout 300"
 	   set -o vi
 	   cowsay \"Hello with $secure_pizza\"
 	  '';
