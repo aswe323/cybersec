@@ -1,5 +1,7 @@
 let
-	pkgs = import <nixpkgs> {};
+    pkgs = import (builtins.fetchTarball {
+        url ="https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
+    }) {};
 in
 	pkgs.mkShell{
 	 packages = [
@@ -12,6 +14,7 @@ in
 	  pkgs.netcat-gnu 
 	  pkgs.openssh
 	  pkgs.gitFull
+	  pkgs.git-credential-manager
 	  ];
 	 env = {
 	  secure_pizza= "Pineapple toppings";	  
@@ -19,6 +22,7 @@ in
 	  GCM_CREDENTIAL_CACHE_OPTIONS="--timeout 300";
 	 };
 	 shellHook = '' 
+	   set -o vi
 	   cowsay \"Hello with $secure_pizza\"
 	  '';
 	}
