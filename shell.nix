@@ -14,17 +14,18 @@ in
 	  pkgs.netcat-gnu 
 	  pkgs.openssh
 	  pkgs.gitFull
-	  pkgs.git-credential-manager
-	  pkgs.dotnet-runtime_8
+	  #pkgs.git-credential-manager
+	  #pkgs.dotnet-runtime_8
+	  pkgs.gh
 	  ];
 	 env = {
 	  secure_pizza= "Pineapple toppings";	  
 	 };
 	 shellHook = '' 
-	   git config --global credential.credentialStore cache
-	   git config --global credential.cacheOptions "--timeout 300"
 	   set -o vi
 	   cowsay \"Hello with $secure_pizza\"
 	  '';
+	   #git config --global credential.credentialStore cache
+	   #git config --global credential.cacheOptions "--timeout 300"
 	}
 	
