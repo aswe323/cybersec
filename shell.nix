@@ -17,6 +17,7 @@ in
 	  pkgs.git
 	  pkgs.gh
 	  pkgs.openvpn
+	  pkgs.metasploit
 	  ];
 	 env = {
 	  secure_pizza= "Pineapple toppings";	  
