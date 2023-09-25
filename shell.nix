@@ -16,6 +16,7 @@ in
 	  pkgs.gitFull #too big
 	  pkgs.git
 	  pkgs.gh
+	  pkgs.openvpn
 	  ];
 	 env = {
 	  secure_pizza= "Pineapple toppings";	  
