@@ -23,7 +23,7 @@ in
 	 };
 	 shellHook = '' 
 	   set -o vi
-	   cowsay "Hello with $secure_pizza\n please don't use git until you gh auth login"
+	   cowsay "Hello with $secure_pizza, please don't use git until you gh auth login, and make sure you are connected to a vpn."
 	  '';
 	}
 	
