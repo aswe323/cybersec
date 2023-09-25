@@ -11,12 +11,13 @@ in
 	  pkgs.inetutils
 	  pkgs.netcat-gnu 
 	  pkgs.openssh
-	  pkgs.git
+	  pkgs.gitFull
 	  ];
 	 env = {
 	  secure_pizza= "Pineapple toppings";	  
 	 };
 	 shellHook = '' 
+	   export GCM_CREDENTIAL_CACHE_OPTIONS="--timeout 300"
 	   cowsay \"Hello with $secure_pizza\"
 	  '';
 	}
