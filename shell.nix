@@ -8,14 +8,13 @@ in
 	  pkgs.cowsay
 	  pkgs.nmap
 	  pkgs.gobuster
-	  pkgs.obsidian
+	  #pkgs.obsidian enable after you can authenticate automagically with a hook
 	  pkgs.mpop
 	  pkgs.inetutils
 	  pkgs.netcat-gnu 
 	  pkgs.openssh
-	  pkgs.gitFull
-	  #pkgs.git-credential-manager
-	  #pkgs.dotnet-runtime_8
+	  pkgs.gitFull #too big
+	  pkgs.git
 	  pkgs.gh
 	  ];
 	 env = {
@@ -23,9 +22,7 @@ in
 	 };
 	 shellHook = '' 
 	   set -o vi
-	   cowsay \"Hello with $secure_pizza\"
+	   cowsay "Hello with $secure_pizza\n please don't use git until you gh auth login"
 	  '';
-	   #git config --global credential.credentialStore cache
-	   #git config --global credential.cacheOptions "--timeout 300"
 	}
 	
