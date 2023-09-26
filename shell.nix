@@ -24,6 +24,8 @@ in
 	 };
 	 shellHook = '' 
 	   set -o vi
+	   cowsay "Cloning SecLists... please wait this might take awhile"
+	   git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 	   cowsay "Hello with $secure_pizza, please don't use git until you gh auth login, and make sure you are connected to a vpn."
 	  '';
 	}
