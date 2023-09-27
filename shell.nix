@@ -8,6 +8,7 @@ in
 	  pkgs.cowsay
 	  pkgs.nmap
 	  pkgs.gobuster
+	  pkgs.whatweb
 	  #pkgs.obsidian enable after you can authenticate automagically with a hook
 	  pkgs.mpop
 	  pkgs.inetutils
@@ -24,6 +25,7 @@ in
 	 };
 	 shellHook = '' 
 	   set -o vi
+	   TARGET=$(cat TARGET)
 	   cowsay "Cloning SecLists... please wait this might take awhile"
 	   git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 	   cowsay "Hello , please don't use git until you gh auth login, and make sure you are connected to a vpn."
