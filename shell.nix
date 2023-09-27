@@ -13,20 +13,20 @@ in
 	  pkgs.inetutils
 	  pkgs.netcat-gnu 
 	  pkgs.openssh
-	  pkgs.gitFull #too big
+	  #pkgs.gitFull #too big
 	  pkgs.git
 	  pkgs.gh
 	  pkgs.openvpn
 	  pkgs.metasploit
 	  ];
 	 env = {
-	  secure_pizza= "Pineapple toppings";	  
+	  example= "example";	  
 	 };
 	 shellHook = '' 
 	   set -o vi
 	   cowsay "Cloning SecLists... please wait this might take awhile"
 	   git clone --depth 1 https://github.com/danielmiessler/SecLists.git
-	   cowsay "Hello with $secure_pizza, please don't use git until you gh auth login, and make sure you are connected to a vpn."
+	   cowsay "Hello , please don't use git until you gh auth login, and make sure you are connected to a vpn."
 	  '';
 	}
 	
