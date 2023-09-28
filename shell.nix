@@ -11,6 +11,7 @@ in
 	  #pkgs.obsidian enable after you can authenticate automagically with a hook
 	  pkgs.mpop
 	  pkgs.inetutils
+	  pkgs.dnsutils
 	  pkgs.netcat-gnu 
 	  pkgs.openssh
 	  #pkgs.gitFull #too big
